@@ -2,9 +2,7 @@ package ingeniousthings.sigfox.client;
 
 import ingeniousthings.sigfox.model.*;
 import retrofit2.Call;
-import retrofit2.http.GET;
-import retrofit2.http.Path;
-import retrofit2.http.Query;
+import retrofit2.http.*;
 
 import java.util.List;
 
@@ -54,5 +52,18 @@ public interface DeviceTypeClient {
 
     @GET("api/devicetypes/{deviceTypeId}/devices")
     Call<Page<Device>> getDevicesByDeviceType(@Path("deviceTypeId") String deviceTypeId);
+
+    @POST("api/devicetypes/create")
+    Call<String> create(@Body DeviceTypeRequest deviceTypeRequest);
+
+    @POST("api/devicetypes/edit")
+    Call<Void> edit(@Body DeviceTypeRequest deviceTypeRequest);
+
+    @POST("api/devicetypes/delete")
+    Call<Void> delete(@Body DeviceTypeRequest deviceTypeRequest);
+
+    default Call<Void> delete(String deviceTypeId) {
+        return delete(new DeviceTypeRequest.Builder().id(deviceTypeId).build());
+    }
 
 }

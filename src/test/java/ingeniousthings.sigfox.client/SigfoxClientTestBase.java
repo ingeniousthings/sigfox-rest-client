@@ -15,7 +15,7 @@ public class SigfoxClientTestBase {
     public static WireMockConfiguration STD_CONFIG = wireMockConfig().port(8888);
 
     @ClassRule
-    public static WireMockClassRule WIRE_MOCK_RULE = new WireMockClassRule(STD_CONFIG);
+    public static WireMockClassRule WIRE_MOCK_RULE = new WireMockClassRule(DEBUG_CONFIG);
 
     @Rule
     public WireMockClassRule sigfoxBackend = WIRE_MOCK_RULE;

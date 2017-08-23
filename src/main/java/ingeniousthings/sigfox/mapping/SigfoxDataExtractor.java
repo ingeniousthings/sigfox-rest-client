@@ -29,9 +29,14 @@ public class SigfoxDataExtractor implements TypeAdapterFactory {
                         && !type.getRawType().equals(Page.class)) {
                         jsonElement = jsonObject.get("data");
                     }
+                    if (jsonObject.has("id") && jsonObject.get("id").isJsonPrimitive()
+                        && type.getRawType().equals(String.class)) {
+                        jsonElement = jsonObject.get("id");
+                    }
                 }
                 return delegate.fromJsonTree(jsonElement);
             }
         }.nullSafe();
     }
+
 }

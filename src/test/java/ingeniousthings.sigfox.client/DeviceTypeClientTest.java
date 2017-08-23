@@ -1,19 +1,15 @@
 package ingeniousthings.sigfox.client;
 
-import com.github.tomakehurst.wiremock.common.ConsoleNotifier;
-import com.github.tomakehurst.wiremock.core.WireMockConfiguration;
-import com.github.tomakehurst.wiremock.junit.WireMockClassRule;
 import ingeniousthings.sigfox.model.*;
-import org.junit.ClassRule;
-import org.junit.Rule;
 import org.junit.Test;
 
 import java.util.List;
 
 import static com.github.tomakehurst.wiremock.client.WireMock.*;
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.Assert.fail;
 
-public class DeviceTypeClientTest extends SigfoxClientTestBase{
+public class DeviceTypeClientTest extends SigfoxClientTestBase {
 
     private static final String DEFAULT_DEVICE_TYPE_ID = "AAA";
 
@@ -118,5 +114,72 @@ public class DeviceTypeClientTest extends SigfoxClientTestBase{
 
         List<DeviceType> deviceTypes = client.deviceTypes.getDeviceTypes().execute().body();
         assertThat(deviceTypes.size()).isEqualTo(2);
+    }
+
+    @Test
+    public void shouldFailWhenDownlinkDataStringNotA8HexadecimalBytesString() {
+        try {
+            new DeviceTypeRequest.Builder()
+                .downlinkMode(DeviceTypeRequest.DownlinkMode.DIRECT_DOWNLINK)
+                .downlinkDataString("plop")
+                .build();
+            fail();
+        } catch (IllegalArgumentException e) {
+            assertThat(e.getMessage()).contains("Since downlinkMode is a direct downlink (0), downlinkDataString must be an 8 hexadecimal bytes string");
+        }
+    }
+
+    @Test
+    public void shouldCreateDeviceType() throws Exception {
+        sigfoxBackend.stubFor(post(urlMatching("/api/devicetypes/create"))
+//            .withRequestBody(notMatching(".*id.*")) //should'nt have an id
+                .willReturn(ok().withBodyFile("device-type/device-type-creation.json"))
+        );
+        DeviceTypeRequest deviceTypeRequest = new DeviceTypeRequest.Builder()
+            .name("dtname")
+            .description("the description")
+            .keepAlive(3000)
+            .alertEmail("alert@email.com")
+            .payloadType(DeviceType.PayloadType.NONE)
+            .downlinkMode(DeviceTypeRequest.DownlinkMode.DIRECT_DOWNLINK)
+            .downlinkDataString("deadbeefcafebabe")
+            .build();
+
+        String deviceTypeId = client.deviceTypes.create(deviceTypeRequest).execute().body();
+        assertThat(deviceTypeId).isEqualTo("32a13484b865d18c7ba716c3");
+    }
+
+    @Test
+    public void shouldEditDeviceType() throws Exception {
+        sigfoxBackend.stubFor(post(urlMatching("/api/devicetypes/edit"))
+            .withRequestBody(containing("id")) //should have an id
+            .willReturn(ok())
+        );
+        DeviceTypeRequest deviceTypeRequest = new DeviceTypeRequest.Builder()
+            .id("deadbeef0486300cbebef070")
+            .name("dtname")
+            .description("the description")
+            .keepAlive(3000)
+            .alertEmail("alert@email.com")
+            .payloadType(DeviceType.PayloadType.NONE)
+            .downlinkMode(DeviceTypeRequest.DownlinkMode.DIRECT_DOWNLINK)
+            .downlinkDataString("deadbeefcafebabe")
+            .build();
+
+        int status = client.deviceTypes.edit(deviceTypeRequest).execute().code();
+        assertThat(status).isEqualTo(200);
+    }
+
+    @Test
+    public void shouldDeleteDeviceType() throws Exception {
+        sigfoxBackend.stubFor(post(urlMatching("/api/devicetypes/delete"))
+            .withRequestBody(containing("id")) //should have an id
+            .willReturn(ok())
+        );
+        DeviceTypeRequest deviceTypeRequest = new DeviceTypeRequest.Builder()
+            .id("deadbeef0486300cbebef070").build();
+
+        assertThat(client.deviceTypes.delete(deviceTypeRequest).execute().isSuccessful()).isTrue();
+        assertThat(client.deviceTypes.delete("deadbeef0486300cbebef070").execute().isSuccessful()).isTrue();
     }
 }
