@@ -1,0 +1,35 @@
+{
+    "data" : [ {
+        "deviceId" : "0235",
+        "time" : 1381410600026,
+        "message" : "No message received since 2013-10-08 15:36:21",
+        "severity" : "ERROR",
+        "deviceTypeId" : "5256c4d6c9a871b80f5a2e50",
+        "callbacks" : [ {
+            "url" : "http://host/path?id=0235&time=1381410600",
+            "status" : 600,
+            "info" : "Connection refused: host/path"
+        }, {
+            "subject" : "some subject",
+            "message" : "some messages",
+            "status" : 200
+        } ]
+    }, {
+        "deviceId" : "4830",
+        "time" : 1381300600026,
+        "message" : "No message received since 2013-10-08 15:36:21",
+        "severity" : "ERROR",
+        "deviceTypeId" : "5256c4d6c9a871b80f5a2e50",
+        "callbacks" : [ {
+            "url" : "http://host/path?id=4830&time=1381300600",
+            "status" : 200
+        }, {
+            "subject" : "some subject",
+            "message" : "some messages",
+            "status" : 200
+        } ]
+    } ],
+    "paging" : {
+        "next" : "https://backend.sigfox.com/api/devicetypes/5256c4d6c9a871b80f5a2e50/status/error?limit=100&offset=100"
+    }
+}

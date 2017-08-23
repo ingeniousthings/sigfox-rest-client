@@ -1,0 +1,70 @@
+{
+    "data": [
+        {
+            "device": "00A0",
+            "deviceType": "4fe9cc70e4b014be5cc90246",
+            "time": 1381766225,
+            "data": "3b3616201e100000",
+            "snr": 10.5,
+            "status": 404,
+            "message": "Page Not Found",
+            "callback": {
+                "url": "http://host/batch?data=00A0%3B1381766225%3B3b3616201e100000%3B"
+            },
+            "parameters": {
+                "time": 1381766225,
+                "data": "3b3616201e100000",
+                "device": "00A0"
+            }
+        },
+        {
+            "device": "00A1",
+            "deviceType": "4fe9cc70e4b014be5cc90246",
+            "time": 1381766225,
+            "data": "3b3616201e100000",
+            "snr": 10.5,
+            "status": 600,
+            "message": "Connection refused",
+            "callback": {
+                "url": "http://host/single?device=00A1&time=1381766225&duplicate=false&snr=10.50&station=001F&data=3b3616201e100000",
+                "headers": {
+                    "Authorization": "Basic U0lHRk9YOndpbGxfcnVsZSB0aGUgd29ybGQ="
+                },
+                "method": "POST",
+                "body": "device=00A1&time=1381766225&duplicate=false&snr=10.50&station=001F&data=3b3616201e100000",
+                "contentType": "application/x-www-form-urlencoded"
+            },
+            "parameters": {
+                "time": 1381766225,
+                "duplicate": false,
+                "station": "001F",
+                "data": "3b3616201e100000",
+                "device": "00A1",
+                "snr": 10.5
+            }
+        },
+        {
+            "device": "00A1",
+            "deviceType": "4fe9cc70e4b014be5cc90246",
+            "time": 1381766225,
+            "data": "3b3616201e100000",
+            "snr": 10.5,
+            "status": 600,
+            "message": "Could not send email to abcd@test.com",
+            "callback": {
+                "subject": "00A1 - 1381766225 ",
+                "message": "3b3616201e100000 - 001F - 10.50"
+            },
+            "parameters": {
+                "time": 1381766225,
+                "station": "001F",
+                "data": "3b3616201e100000",
+                "device": "00A1",
+                "snr": 10.5
+            }
+        }
+    ],
+    "paging": {
+        "next": "https://backend.sigfox.com/api/callbacks/messages/error?offset=3&since=1381766000&deviceTypeId=4fe9cc70e4b014be5cc90246"
+    }
+}

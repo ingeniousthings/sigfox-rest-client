@@ -1,0 +1,40 @@
+{
+    "data" : [
+        {
+            "id":"529c50f6e4b0f3ec6b3bc4d9",
+            "groupId":"5409cb539336c0db1b720da6",
+            "name":"BSS Order sample",
+            "startTime":1385852400000,
+            "endTime":1417388400000,
+            "communicationEndTime":1417388400000,
+            "timezone":"Europe/Paris",
+            "tokenDuration":12,
+            "activationPeriodDuration":0,
+            "maxTokens":100000,
+            "maxTokensInUse":50000,
+            "tokensInUse":6659,
+            "state":1,
+            "type":2,
+            "bidir":true,
+            "maximumNumberOfDownlinkFrames":4
+
+        }, {
+            "id":"9a1265f6f1b0f3ec6b3cfae",
+            "groupId":"5409cb539336c0db1b720da6",
+            "name":"Other contract sample",
+            "startTime":1425852400000,
+            "endTime":1697388400000,
+            "communicationEndTime":1697388400000,
+            "timezone":"Europe/Paris",
+            "tokenDuration":24,
+            "activationPeriodDuration":1,
+            "maxTokens":10000,
+            "maxTokensInUse":10000,
+            "tokensInUse":5721,
+            "state":1,
+            "type":1,
+            "bidir":true,
+            "maximumNumberOfDownlinkFrames":2
+
+        } ]
+}

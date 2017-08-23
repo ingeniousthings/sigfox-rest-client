@@ -1,0 +1,9 @@
+{
+    "id" : "4d3091a05ee16b3cc86699ab",
+    "name" : "Sigfox test device",
+    "group" : "4d39a4c9e03e6b3c430e2188",
+    "description" : "Little things in the black boxes",
+    "keepAlive" : 0,
+    "payloadType" : "Geolocation",
+    "contract" : "523b1d10d777d3f5ae038a02"
+}

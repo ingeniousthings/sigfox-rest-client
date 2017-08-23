@@ -1,0 +1,48 @@
+{
+    "data": [
+        {
+            "id": "deadbeeffacecafebabecafe",
+            "channel": "URL",
+            "callbackType": 0,
+            "payloadConfig": "int1::uint:8 int2::uint:8",
+            "callbackSubtype": 0,
+            "urlPattern": "http://myserver.com/sigfox/callback",
+            "httpMethod": "POST",
+            "headers": {
+                "key1": "value1",
+                "key2": "value2"
+            },
+            "enabled": true,
+            "sendDuplicate": false,
+            "dead": false,
+            "downlinkHook": false
+        },
+        {
+            "id": "beefbeefcafecafebabecafe",
+            "channel": "BATCH_URL",
+            "callbackType": 0,
+            "callbackSubtype": 0,
+            "urlPattern": "http://myserver.com/sigfox/callback/batch",
+            "httpMethod": "POST",
+            "linePattern": "{device};{data};",
+            "enabled": true,
+            "sendDuplicate": false,
+            "dead": false,
+            "downlinkHook": false
+        }
+    ],
+    "service": [
+        {
+            "id": "beefbeeffaceb00cbabecafe",
+            "channel": "URL",
+            "callbackType": 1,
+            "callbackSubtype": 0,
+            "urlPattern": "http://myserver.com/sigfox/callback/service",
+            "httpMethod": "GET",
+            "enabled": true,
+            "sendDuplicate": false,
+            "dead": false,
+            "downlinkHook": false
+        }
+    ]
+}

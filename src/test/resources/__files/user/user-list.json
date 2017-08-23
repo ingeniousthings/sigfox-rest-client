@@ -1,0 +1,65 @@
+{
+    "data" : [ {
+        "firstName" : "Michel",
+        "lastName" : "Dupont",
+        "email" : "michel.dupont@sigfox.com",
+        "timezone" : "Europe/Paris",
+        "creationTime" : 1392812363644,
+        "creationDate" : "Wed Feb 19 13:19:23 CET 2014",
+        "lastLogin" : 1448351837467,
+        "lastLoginDate" : "Tue Nov 24 08:57:17 CET 2015",
+        "userRoles" : [ {
+            "group" : {
+                "id" : "babecafebabecafebabecafe",
+                "name" : "Root",
+                "nameCI" : "root",
+                "description" : "Master Group",
+                "path" : [ ],
+                "billable" : false
+            },
+            "customRole" : {
+                "id" : "51d19e7ce4b067e859e4c2c1",
+                "name" : "SUPPORT_CORP"
+            }
+        } ]
+    }, {
+        "firstName" : "Claude",
+        "lastName" : "Martin",
+        "email" : "claude.martin@sigfox.com",
+        "timezone" : "Europe/Paris",
+        "creationTime" : 1394118285929,
+        "creationDate" : "Thu Mar 06 16:04:45 CET 2014",
+        "lastLogin" : 1446456643002,
+        "lastLoginDate" : "Mon Nov 02 10:30:43 CET 2015",
+        "userRoles" : [ {
+            "group" : {
+                "id" : "babecafebabecafebabecafe",
+                "name" : "Root",
+                "nameCI" : "root",
+                "description" : "Master Group",
+                "path" : [ ],
+                "billable" : false
+            },
+            "customRole" : {
+                "id" : "5138e7dfa2f1fffaf25fd407",
+                "name" : "SNO [R]"
+            }
+        }, {
+            "group" : {
+                "id" : "deadbeeffacecafebabecafe",
+                "name" : "SIGFOX_France",
+                "nameCI" : "sigfox_france",
+                "description" : "Sigfox France SNO Group",
+                "path" : [ "babecafebabecafebabecafe" ],
+                "billable" : false
+            },
+            "customRole" : {
+                "id" : "539ea35893364266e6202179",
+                "name" : "OPT_DOWNLINK"
+            }
+        } ]
+    } ],
+    "paging" : {
+        "next" : "https://127.0.0.1:8080/api/users?limit=3&offset=6"
+    }
+}

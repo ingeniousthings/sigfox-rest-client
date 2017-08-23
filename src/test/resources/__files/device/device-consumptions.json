@@ -1,0 +1,13 @@
+{
+    "consumption": {
+        "id" : "110160_2015",
+        "consumptions": [
+            {
+                "frameCount": 12,
+                "downlinkFrameCount": 3,
+                "roamingFrameCount": 2,
+                "roamingDownlinkFrameCount": 1
+            }
+        ]
+    }
+}

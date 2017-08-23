@@ -1,0 +1,28 @@
+{
+    "consumption" : {
+        "id" : "53b5300093365d24f52ff393_2015",
+        "consumptions" : [ {
+            "deviceCount": 4368,
+            "frameCount": 185409,
+            "activationCount": 24,
+            "tokenRevocations": 0,
+            "revokedActivations": 0,
+            "downlinkFrameCount": 0,
+            "roamingDeviceCount": 6,
+            "roamingFrameCount": 156,
+            "roamingDownlinkFrameCount": 0,
+            "roamingDetailedFrameCount": {
+                "SNO_FRANCE": {
+                    "roamingFrameCount": 151,
+                    "roamingDownlinkFrameCount": 0
+                },
+                "SNO_SPAIN": {
+                    "roamingFrameCount": 5,
+                    "roamingDownlinkFrameCount": 0
+                }
+            },
+            "framesByRoamingDevicesCount": 3272,
+            "downlinkFramesByRoamingDevicesCount": 0
+        }]
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "data" : [ {
+        "time" : 1343321977000,
+        "valid" : true,
+        "lat" : 42.4631156,
+        "lng" : 1.5652321,
+        "radius" : 360
+    } ],
+    "paging" : {
+        "next" : "https://backend.sigfox.com/api/devices/002C/locations?limit=100&before=1338803969"
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "data" : [ {
+        "device" : "002C",
+        "time" : 1343321977,
+        "data" : "3235353843fc",
+        "snr" : "38.2",
+        "computedLocation": {
+            "lat" : 43.45,
+            "lng" : 6.54,
+            "radius": 500
+        },
+        "linkQuality" : "GOOD",
+        "downlinkAnswerStatus" : {
+            "data" : "1511000a00007894"
+        }
+    } ],
+    "paging" : {
+        "next" : "https://backend.sigfox.com/api/devices/002C/messages?limit=100&before=1338803969"
+    }
+}

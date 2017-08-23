@@ -1,0 +1,20 @@
+{
+    "data" : [ {
+        "deviceId" : "4830",
+        "time" : 1381300600026,
+        "message" : "No message received since 2013-10-08 15:36:21",
+        "severity" : "ERROR",
+        "deviceTypeId" : "5256c4d6c9a871b80f5a2e50",
+        "callbacks" : [ {
+            "url" : "http://host/path?id=4830&time=1381300600",
+            "status" : 200
+        }, {
+            "subject" : "some subject",
+            "message" : "some messages",
+            "status" : 200
+        } ]
+    } ],
+    "paging" : {
+        "next" : "https://backend.sigfox.com/api/devices/4830/status/error?limit=100&offset=100"
+    }
+}

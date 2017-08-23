@@ -1,0 +1,21 @@
+{
+    "data" : [ {
+        "deviceIds" : [ "0235", "023A", "4830" ],
+        "time" : 1381410600026,
+        "message" : "Sigfox network experiencing issues that could cause message loss or delay for some devices.",
+        "severity" : "WARN",
+        "deviceTypeId" : "5256c4d6c9a871b80f5a2e50",
+        "callbacks" : [ {
+            "url" : "http://host/path?id=0235&time=1381410600",
+            "status" : 600,
+            "info" : "Connection refused: host/path"
+        }, {
+            "subject" : "some subject",
+            "message" : "some messages",
+            "status" : 200
+        } ]
+    }],
+    "paging" : {
+        "next" : "https://backend.sigfox.com/api/devicetypes/5256c4d6c9a871b80f5a2e50/status/warn?limit=100&offset=100"
+    }
+}

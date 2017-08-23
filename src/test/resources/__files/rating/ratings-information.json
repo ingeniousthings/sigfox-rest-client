@@ -1,0 +1,29 @@
+{
+    "data" : [{
+        "id":"52a403dae4b026a9f3dbfde3",
+        "contractId":"52c26ce69336aad2f2d0a43f",
+        "fromTime":1388530800000,
+        "toTime":1390172400000,
+        "state":1,
+        "tokensInUse":5764,
+        "maxTokens":9000,
+        "consumptionData":[{
+            "quarterDate":1396303200000,
+            "activationDays":71169,
+            "sentMessages":2154451,
+            "sentDownlinkMessages":3
+        }]
+    },{
+        "id":"56e98ea30c0a25c92e876fff",
+        "contractId":"56e982e00c0a6a1aa2242afd",
+        "fromTime":1458086400000,
+        "toTime":1458086400000,
+        "state":1,
+        "tokensInUse":0,
+        "maxTokens":1000000,
+        "consumptionData":[]
+    }],
+    "paging" : {
+        "next" : "https://backend.sigfox.com/api/ratings?groupId=56e96e2f0c0a58bf54c4730f&externalClientId=56e96e2f0c0a58bf54c4730f&fromTime=2016-03-01&toTime=2016-03-31&state=1&invoiced=false&limit=2&offset=2"
+    }
+}

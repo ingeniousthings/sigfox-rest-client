@@ -1,0 +1,28 @@
+{
+    "data" : [ {
+        "id":"510b848ee4b0ca47869752b5",
+        "name":"Group 1",
+        "nameCI":"group 1",
+        "description":"Group 1 description text",
+        "path":[
+            "51f13454bc54518c7bae7d4d",
+            "50f13484b846618c7bae77b7"
+        ],
+        "billable":true,
+        "bssId": "bss-48631656321"
+    }, {
+        "id":"489b848ee4b0ca4786945614",
+        "name":"Group 2",
+        "nameCI":"group 2",
+        "description":"Group 2 description text",
+        "path":[
+            "51f13454bc54518c7bae7d4d",
+            "50f13484b846618c7bae77b7"
+        ],
+        "billable":false,
+        "bssId": "bss-4686131845"
+    } ],
+    "paging": {
+        "next": "https://backend.sigfox.com/api/groups?limit=2&offset=2"
+    }
+}

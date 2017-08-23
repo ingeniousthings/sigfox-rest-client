@@ -1,0 +1,19 @@
+{
+    "rating":{
+        "id":"52a403dae4b026a9f3dbfde3",
+        "contractId":"52c26ce69336aad2f2d0a43f",
+        "fromTime":1388530800000,
+        "toTime":1390172400000,
+        "state":1,
+        "tokensInUse":5764,
+        "maxTokens":9000,
+        "consumptionData":[
+            {
+                "quarterDate":1396303200000,
+                "activationDays":71169,
+                "sentMessages":2154451,
+                "sentDownlinkMessages":3
+            }
+        ]
+    }
+}

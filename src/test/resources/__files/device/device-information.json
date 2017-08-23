@@ -1,0 +1,25 @@
+{
+    "id" : "002C",
+    "name" : "Labege 4",
+
+    "type" : "4d3091a05ee16b3cc86699ab",
+    "last" : 1343321977,
+    "averageSignal": 8.065601,
+    "averageSnr": 8.065601,
+    "averageRssi": -122.56,
+    "state": 0,
+    "lat" : 43.45,
+    "lng" : 1.54,
+    "computedLocation": {
+        "lat" : 43.45,
+        "lng" : 6.54,
+        "radius": 500
+    },
+    "activationTime": 1404096340556,
+    "pac": "545CB3B17AC98BA4",
+    "tokenType": "CONTRACT",
+    "contractId": "7896541254789654aedfba4c",
+    "tokenEnd": 1449010800000,
+    "preventRenewal": false
+
+}

@@ -1,0 +1,40 @@
+{
+    "general":{
+        "contract":"Sample contract",
+        "from":1388530800000,
+        "to":1388703600000,
+        "billingMode":1,
+        "timezone":"Europe/Paris",
+        "fixedPrice":"0.00",
+        "communicationPrice":"0.00",
+        "totalPrice":"0.00",
+        "maxNumberOfDevices":9000,
+        "activatedDevices":0,
+        "subscriptionLevel":"First",
+        "unitPricePerYear":"12.00",
+        "fixedPartPercentage":"0.00%"
+    },
+    "details":[
+        {
+            "date":1388530800000,
+            "cumulatedActivatedDevices":0,
+            "activatedDeviceOnPeriod":0,
+            "messagesSentOnPeriod":0,
+            "dailyCost":0.0
+        },
+        {
+            "date":1388617200000,
+            "cumulatedActivatedDevices":0,
+            "activatedDeviceOnPeriod":0,
+            "messagesSentOnPeriod":0,
+            "dailyCost":0.0
+        }
+    ],
+    "communicationPrice":{
+        "unitPrice":"12.00",
+        "contractDuration":365,
+        "terminated":false,
+        "duration":1,
+        "communicationPartPercentage":1.0000
+    }
+}
